@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #9e9da0;
+}
+.UpImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url(../images/HomeBackground.avif);
+    background-size:cover;
+}
+.UpImages{
+    background-color: black;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+    margin-top: 20vh;
+    margin-left: -30vh;
+ 
+}
+
+.content {
+    margin-top: 20px; /* Adjust the margin as needed */
+   
+    color: rgb(12, 1, 1);
+    margin-top: 10vh;
+}
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent, #0004);
+}
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.frame{
+    width: 40vh;
+   margin-right: 40px;
+   margin-top: 7vh;
+    padding: 30px;
+    background-color: #fdfdfd;
+ 
+     /* Add horizontal spacing between boxes */
+    transition: transform 0.3s ease; /* Add transition effect */
+    height: 58vh;
+    display: flex;
+    flex-direction: column;
+
+   
+}
+.frame2 {
+    width: 40vh;
+    margin-right: 40px;
+    margin-top: 7vh;
+    padding: 30px;
+    background-color: #a5a7a5;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: flex; /* Use flexbox to display items horizontally */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+ 
+}
+
+.frame-container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.para{
+    margin-left: -2vh;
+    margin-bottom: 3vh
+}
+.frame:hover {
+    transform: scale(1.05); /* Scale the box on hover */
+}
+.TopOne{
+    margin-top: -60vh;
+    justify-content: center;
+    text-align: center;
+    margin-left: -10vh;
+    color: rgb(4, 23, 18);
+}
+
+.propListing-container{
+    background: url(../images/listUs.avif);
+    background-size:50%;
+    width: 230vh;
+    height: 60vh;
+    margin-top: 10vh;
+    display: flex;
+}
+.card-title {
+    color: #262626;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+  
+  .small-desc {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #452c2c;
+  }
+  
+  .small-desc {
+    font-size: 1em;
+  }
+  
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #6293c8, #384c6c);
+    border-radius: 0 4px 0 32px;
+  }
+  
+  .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
+  
+  .card {
+    display: block;
+    position: relative;
+    max-width: 300px;
+    max-height: 320px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #546a75, #98aeb3);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .card:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #404747, #577dba);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+  }
+  
+  .card:hover:before {
+    transform: scale(28);
+  }
+  
+  .card:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .card:hover .card-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+  }
+  .vertical-line {
+    border: 5px ; /* You can adjust the color and thickness as needed */
+    height: 100%; /* Adjust the height based on your content */
+    margin: 0 60px; /* Adjust the margin as needed */
+    background-color: black;
+  }
+  /*heyyyy*/
+
+  .cardd {
+  width: 300px;
+  height: 280px;
+  background-color: #47528a;
+  background-image: linear-gradient(43deg, #97a4e7 0%, #4e35a1 46%, #545381 100%);
+  border-radius: 8px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  cursor: pointer;
+  margin-bottom: 10vh;
+ 
+ 
+}
+
+.cardd-content {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 110%;
+}
+
+.cardd-content .cardd-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.cardd-content .cardd-para {
+  color: inherit;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.cardd:hover {
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardd:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 1;
+}
+
+.cardd:hover:before {
+  transform: translateX(-100%);
+}
+
+.cardd:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 1;
+}
+
+.cardd:hover:after {
+  transform: translateX(100%);
+}
+
+.accordion{
+  width: 76%;
+  height: 350px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.uli{
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.lilu{
+  --img-1: url(../images/showcase1.avif);
+  --img-2: url(../images/showcase2.avif);
+  --img-3: url(../images/showcase3.avif);
+  --img-4: url(../images/showcase4.avif);
+
+  &:nth-child(1){
+      background-image: var(--img-1);
+  }
+  &:nth-child(2){
+      background-image: var(--img-2);
+  }
+  &:nth-child(3){
+      background-image: var(--img-3);
+  }
+  &:nth-child(4){
+      background-image: var(--img-4);
+  }
+
+  width: 30%;
+  height: 350px;
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: all 500ms ease ;
+}
+
+li div{
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+li div a{
+  display: block;
+  height: 250px;
+  width: 100%;
+  color: rgb(90, 85, 81);
+  position: relative;
+  z-index: 3;
+
+  padding: 15px 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+
+}
+
+li div a *{
+  width: 100%;
+  margin: 0;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateX(-20px);
+  transition: all 400ms ease;
+
+}
+
+li div a h2{
+  font-family: Montserrat, sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+
+li div a p{
+  top: 160px;
+  font-size: 13.5px;
+
+}
+
+li div a * {
+  opacity: 0;
+}
+
+ul :hover li {
+  width: 10%;
+}
+
+ul:hover li:hover{
+  width: 80%;
+}
+
+
+ul:hover li:hover a *{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+
+
